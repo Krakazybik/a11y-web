@@ -1,0 +1,10 @@
+@import "../styles/colors";
+
+.Input {
+  background-color: $color-gray;
+  border: 1px solid #C7D2E9;
+  border-radius: 8px;
+  height: 64px;
+  font-size: 30px;
+  padding: 0 16px;
+}
