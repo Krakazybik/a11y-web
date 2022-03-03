@@ -1,0 +1,19 @@
+.Modal__Background {
+  z-index: 1;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Modal__Card {
+  width: 792px;
+  background: white;
+  min-height: 480px;
+}
