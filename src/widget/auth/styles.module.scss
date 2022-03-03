@@ -1,0 +1,10 @@
+.Auth {
+  display: flex;
+  flex-direction: column;
+  padding: 32px;
+  form {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 32px;
+  }
+}
