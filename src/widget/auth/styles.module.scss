@@ -1,7 +1,15 @@
+@import "src/global.module";
+
 .Auth {
   display: flex;
   flex-direction: column;
-  padding: 32px;
+  padding: 32px 152px;
+
+  h2 {
+    font-size: 50px;
+    line-height: 59px;
+  }
+
   form {
     display: flex;
     flex-direction: column;
