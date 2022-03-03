@@ -1,27 +1,23 @@
 import React from 'react';
 import styles from './styles.module.scss';
+import { Input } from '../../shared/input';
 
 export const Auth: React.FC = () => (
   // eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions
-  <section
-    aria-labelledby="modalHeading"
-    className={styles.Auth}
-    tabIndex={-1}
-    onKeyDown={(event) => console.log(event)}
-  >
+  <div aria-labelledby="modalHeading" className={styles.Auth}>
     <h2 id="modalHeading">Вход</h2>
     <form>
-      <label>
+      <label htmlFor="authEmail" className={styles.visually_hidden}>
         Логин
-        <input type="email" />
       </label>
+      <Input type="email" placeholder="Логин" id="authEmail" />
 
-      <label>
+      <label htmlFor="authPassword" className={styles.visually_hidden}>
         Пароль
-        <input type="password" />
       </label>
+      <Input type="password" placeholder="Пароль" id="authPassword" />
 
       <button type="submit">Вход</button>
     </form>
-  </section>
+  </div>
 );
