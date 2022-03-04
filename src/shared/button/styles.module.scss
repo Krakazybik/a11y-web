@@ -1,0 +1,16 @@
+@import "../styles/colors";
+
+.Button {
+  background-color: $color-alt;
+  border-radius: 8px;
+  border: 1px solid $color-alt;
+
+  &_Large {
+    height: 64px;
+    font-size: 30px;
+    line-height: 35px;
+  }
+  &_Mid {
+    height: 52px;
+  }
+}
