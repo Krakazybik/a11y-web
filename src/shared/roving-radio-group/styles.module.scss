@@ -1,11 +1,9 @@
 @import "src/global.module";
 @import "../styles/colors";
 
-.Language_Switch {
+.Roving_Radio {
   display: flex;
   grid-gap: 8px;
-
-
   div {
     display: flex;
     justify-content: center;
@@ -14,5 +12,14 @@
     height: 52px;
     background-color: $color-alt;
     border-radius: 4px;
+    &:hover {
+      background-color: blueviolet;
+      color: #FFF;
+    }
   }
+}
+
+.Selected {
+  text-decoration: underline;
+  font-weight: bold;
 }

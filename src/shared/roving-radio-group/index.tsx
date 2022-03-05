@@ -1,13 +1,17 @@
 import React from 'react';
+import cn from 'classnames';
 import styles from './styles.module.scss';
-import { getUniqueId } from '../utils';
 
 type RovingRadioGroupProps = {
+  id: string;
+  ariaGroupCaption: string;
   onSwitch: (switchIndex: number) => void;
   radioItems: Array<{ label: string; ariaText: string; id: string }>;
 };
 
-const RovingRadioGroup: React.FC<RovingRadioGroupProps> = ({
+export const RovingRadioGroup: React.FC<RovingRadioGroupProps> = ({
+  id,
+  ariaGroupCaption,
   onSwitch,
   radioItems,
 }) => {
@@ -40,44 +44,35 @@ const RovingRadioGroup: React.FC<RovingRadioGroupProps> = ({
 
   return (
     <div
-      className={styles.Language_Switch}
+      className={styles.Roving_Radio}
       role="radiogroup"
-      aria-labelledby={getUniqueId('roving-radio-switch')}
+      aria-labelledby={`roving-radio-switch${id}`}
     >
+      <label
+        className={styles.visually_hidden}
+        htmlFor={`roving-radio-switch${id}`}
+      >
+        {ariaGroupCaption}
+      </label>
       {radioItems.map((item, index) => (
         <React.Fragment key={item.id}>
           <div
             role="radio"
             aria-checked={checked === index}
-            id={getUniqueId(item.id)}
+            id={item.id}
             tabIndex={Number(checked === index) - 1}
             onKeyDown={handleRovingKey}
+            onClick={() => setChecked(index)}
             ref={(div) => checked === index && div?.focus()}
+            className={cn(checked === index && styles.Selected)}
           >
             {item.label}
           </div>
-          <label
-            className={styles.visually_hidden}
-            htmlFor={getUniqueId(item.id)}
-          >
+          <label className={styles.visually_hidden} htmlFor={item.id}>
             {item.ariaText}
           </label>
         </React.Fragment>
       ))}
     </div>
-  );
-};
-
-export const LanguageSwitch: React.FC = () => {
-  const radios = [
-    { id: 'language-switch-en', label: 'EN', ariaText: 'English' },
-    { id: 'language-switch-ru', label: 'RU', ariaText: 'Русский' },
-  ];
-
-  return (
-    <RovingRadioGroup
-      radioItems={radios}
-      onSwitch={(val) => console.log(val)}
-    />
   );
 };
