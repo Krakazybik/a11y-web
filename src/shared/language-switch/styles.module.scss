@@ -1,0 +1,18 @@
+@import "src/global.module";
+@import "../styles/colors";
+
+.Language_Switch {
+  display: flex;
+  grid-gap: 8px;
+
+
+  div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 64px;
+    height: 52px;
+    background-color: $color-alt;
+    border-radius: 4px;
+  }
+}

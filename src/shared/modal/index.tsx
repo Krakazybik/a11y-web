@@ -3,7 +3,7 @@ import FocusTrap from 'focus-trap-react';
 import { Helmet } from 'react-helmet';
 import { createPortal } from 'react-dom';
 import styles from './styles.module.scss';
-import { SquareButton } from '../../shared/square-button';
+import { SquareButton } from '../square-button';
 
 type ModalProps = {
   title?: string;
