@@ -1,0 +1,17 @@
+@import "src/global.module";
+
+.History {
+  &__ReadMore {
+    border: none;
+    background: none;
+    text-decoration: underline;
+    padding: 4px 8px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: blueviolet;
+      color: white;
+      border-radius: 2px;
+    }
+  }
+}
