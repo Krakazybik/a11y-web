@@ -5,6 +5,8 @@
   border-radius: 8px;
   border: 1px solid $color-alt;
 
+  cursor: pointer;
+
   &_Large {
     height: 64px;
     font-size: 30px;
@@ -12,5 +14,13 @@
   }
   &_Mid {
     height: 52px;
+  }
+  &_Small {
+    height: 44px;
+    padding: 12px 20px;
+    font-size: 18px;
+    line-height: 20px;
+    background-color: $color-violet;
+    color: $color-light;
   }
 }
