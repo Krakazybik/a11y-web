@@ -1,0 +1,16 @@
+.UnderlinedInput {
+  background: none;
+  border: none;
+  border-bottom: 1px solid black;
+  height: 42px;
+  padding: 0 4px;
+  font-size: 18px;
+  line-height: 21px;
+
+  &::placeholder {
+    color: black;
+    font-size: 18px;
+    line-height: 21px;
+    padding: 0 4px;
+  }
+}
