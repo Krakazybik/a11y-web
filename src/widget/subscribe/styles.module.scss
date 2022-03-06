@@ -1,0 +1,20 @@
+.Subscribe {
+  display: flex;
+  flex-direction: column;
+  grid-gap: 16px;
+
+  input[type=checkbox]
+  {
+    -ms-transform: scale(2); /* IE */
+    -moz-transform: scale(2); /* FF */
+    -webkit-transform: scale(2); /* Safari and Chrome */
+    -o-transform: scale(2); /* Opera */
+    transform: scale(2);
+    margin-right: 8px;
+  }
+}
+
+.Subscribe__Input {
+  display: flex;
+  grid-gap: 20px;
+}
