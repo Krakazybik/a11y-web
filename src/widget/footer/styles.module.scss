@@ -1,0 +1,41 @@
+@import "src/shared/styles/colors";
+
+.Footer__Wrapper {
+  display: flex;
+  justify-content: space-around;
+  background-color: $color-gray-alt;
+  padding: 72px 0;
+  h3 {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 28px;
+  }
+}
+
+.Footer {
+  display: flex;
+  width: 1032px;
+  grid-gap: 16px;
+  justify-content: space-between;
+}
+
+
+.Footer__Nav {
+  ul {
+    padding: 0;
+    li {
+      margin: 16px 0;
+      list-style: none;
+      a {
+        text-decoration: none;
+        &:hover {
+          text-decoration: underline;
+        }
+
+        &:visited {
+          color: #000;
+        }
+      }
+    }
+  }
+}
