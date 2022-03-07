@@ -1,11 +1,14 @@
 import React from 'react';
 import './App.scss';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
 import { Menu } from './widget/menu';
 import { Header } from './widget/header';
 import { History } from './widget/history';
 import { Content } from './widget/content';
 import { Footer } from './widget/footer';
+import { Card } from './shared/card';
+import { Museums } from './widget/museums';
+import { MuseumNavigation } from './widget/museum-navigation';
 
 const text =
   'Государственный музей изобразительных искусств имени А.С. Пушкина – одно из крупнейших в России художественных собраний зарубежного искусства с древнейших времен до наших дней.\n' +
@@ -21,7 +24,20 @@ const AppLayout = () => (
     <Header />
     <Menu />
     <Content>
-      <History text={text} partIndex={128} header="Музей имени А.С. Пушкина" />
+      <MuseumNavigation />
+      <Routes>
+        <Route
+          path="/history"
+          element={
+            <History
+              text={text}
+              partIndex={128}
+              header="Музей имени А.С. Пушкина"
+            />
+          }
+        />
+        <Route path="/museums" element={<Museums />} />
+      </Routes>
     </Content>
     <Footer />
   </>

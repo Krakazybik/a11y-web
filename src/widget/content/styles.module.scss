@@ -1,4 +1,7 @@
 .Content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   max-width: 1032px;
   grid-gap: 16px;
   margin: 0 auto;

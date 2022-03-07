@@ -19,6 +19,15 @@
   justify-content: space-between;
 }
 
+.Social_Networks {
+  display: flex;
+  flex-wrap: wrap;
+  :nth-child(1) {
+    width: 100%;
+    margin-bottom: 8px;
+  }
+}
+
 
 .Footer__Nav {
   ul {

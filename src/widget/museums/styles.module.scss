@@ -1,0 +1,22 @@
+.Museums {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 24px 0;
+  grid-row-gap: 64px;
+
+  h3 {
+    font-weight: normal;
+    font-size: 26px;
+    line-height: 30px;
+  }
+
+  address {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    font-style: normal;
+    padding-bottom: 16px;
+  }
+}

@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from './styles.module.scss';
 import { Subscribe } from '../subscribe';
+import { SocialNetworks } from '../social-networks';
 
 export const Footer: React.FC = () => (
   <div className={styles.Footer__Wrapper}>
@@ -20,8 +21,9 @@ export const Footer: React.FC = () => (
             </li>
           </ul>
         </nav>
-        <section>
+        <section className={styles.Social_Networks}>
           <h3>Социальные сети</h3>
+          <SocialNetworks />
         </section>
       </div>
       <aside>
