@@ -42,6 +42,11 @@ export const RovingRadioGroup: React.FC<RovingRadioGroupProps> = ({
     }
   };
 
+  const handleClick = (index: number) => {
+    setChecked(index);
+    onSwitch(index);
+  };
+
   return (
     <div
       className={styles.Roving_Radio}
@@ -62,7 +67,7 @@ export const RovingRadioGroup: React.FC<RovingRadioGroupProps> = ({
             id={item.id}
             tabIndex={Number(checked === index) - 1}
             onKeyDown={handleRovingKey}
-            onClick={() => setChecked(index)}
+            onClick={() => handleClick(index)}
             ref={(div) => checked === index && div?.focus()}
             className={cn(checked === index && styles.Selected)}
           >
