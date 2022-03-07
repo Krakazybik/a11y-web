@@ -1,0 +1,15 @@
+@import "src/shared/styles/colors";
+
+.MuseumNav {
+  display: flex;
+  grid-gap: 16px;
+  a {
+    padding: 16px 32px;
+    border-radius: 8px;
+  }
+}
+
+.Active {
+  background: $color-alt;
+  text-decoration: none;
+}
