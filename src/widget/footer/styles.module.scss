@@ -1,4 +1,4 @@
-@import "src/shared/styles/colors";
+@import "../../shared/ui/styles/colors";
 
 .Footer__Wrapper {
   display: flex;
@@ -17,15 +17,6 @@
   width: 1032px;
   grid-gap: 16px;
   justify-content: space-between;
-}
-
-.Social_Networks {
-  display: flex;
-  flex-wrap: wrap;
-  :nth-child(1) {
-    width: 100%;
-    margin-bottom: 8px;
-  }
 }
 
 

@@ -1,4 +1,4 @@
-@import "src/shared/styles/colors";
+@import "../../shared/ui/styles/colors";
 
 .MuseumNav {
   display: flex;
@@ -9,7 +9,3 @@
   }
 }
 
-.Active {
-  background: $color-alt;
-  text-decoration: none;
-}

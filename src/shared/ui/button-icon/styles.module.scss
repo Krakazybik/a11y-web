@@ -1,4 +1,4 @@
-@import "src/global.module";
+@import "../../../global.module";
 
 .Button_Icon {
   width: 48px;
@@ -9,6 +9,7 @@
   background-color: transparent;
   background-repeat: no-repeat;
   border: none;
+
   img:hover  {
     filter: invert(1);
   }

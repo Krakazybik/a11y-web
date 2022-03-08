@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './styles.module.scss';
-import { Button } from '../../shared/button';
-import { UnderlinedInput } from '../../shared/underlined-input';
+import { Button } from '../../shared/ui/button';
+import { UnderlinedInput } from '../../shared/ui/underlined-input';
 
 export const Subscribe: React.FC = () => (
   <form className={styles.Subscribe}>

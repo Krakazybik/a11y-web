@@ -6,6 +6,10 @@
   padding: 24px 0;
   grid-row-gap: 64px;
 
+  li {
+    list-style: none;
+  }
+
   h3 {
     font-weight: normal;
     font-size: 26px;

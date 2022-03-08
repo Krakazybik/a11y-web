@@ -21,10 +21,7 @@ export const Footer: React.FC = () => (
             </li>
           </ul>
         </nav>
-        <section className={styles.Social_Networks}>
-          <h3>Социальные сети</h3>
-          <SocialNetworks />
-        </section>
+        <SocialNetworks />
       </div>
       <aside>
         <h3>Подписка на новости</h3>

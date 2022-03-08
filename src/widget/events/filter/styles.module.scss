@@ -1,0 +1,25 @@
+@import "../../../shared/ui/styles/colors";
+
+.Filter {
+  width: 100%;
+
+}
+
+.FilterButton {
+  padding: 16px 32px;
+  border-radius: 8px;
+  background: none;
+  border: none;
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 22px;
+  line-height: 26px;
+  margin-right: 8px;
+}
+
+
+.Active {
+  background: $color-alt;
+  text-decoration: none;
+}
+
