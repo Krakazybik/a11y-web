@@ -5,11 +5,13 @@ import { Filter } from './filter';
 import { $filteredEvents } from './model';
 import { Card } from '../../shared/ui/card';
 
+// TODO: Можно ли для section прятать heading с помощью aria-hidden для отключения дублирования ?
+
 export const Events = () => {
   const events = useList($filteredEvents, (store) => (
     <Card>
       <img src={store.src} alt="" />
-      <h4>{store.header}</h4>
+      <h3>{store.header}</h3>
       <p>
         Выставка до <time dateTime="2001-05-15 19:00">{store.endDate}</time>.
       </p>
@@ -19,9 +21,10 @@ export const Events = () => {
   ));
 
   return (
-    <section className={styles.Events}>
-      <h3>Выставки и события</h3>
+    <section className={styles.Events} aria-labelledby="heading-events">
+      <h2 id="heading-events">Выставки и события</h2>
       <Filter />
+      {/* TODO: group? */}
       {events}
     </section>
   );
