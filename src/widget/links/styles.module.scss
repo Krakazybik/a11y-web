@@ -1,0 +1,22 @@
+@import "src/global.module";
+
+
+.Links__Nav {
+  ul {
+    padding: 0;
+    li {
+      margin: 16px 0;
+      list-style: none;
+      a {
+        text-decoration: none;
+        &:hover {
+          text-decoration: underline;
+        }
+
+        &:visited {
+          color: #000;
+        }
+      }
+    }
+  }
+}
