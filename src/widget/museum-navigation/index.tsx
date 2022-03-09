@@ -1,6 +1,4 @@
 import React from 'react';
-import cn from 'classnames';
-import styles from './styles.module.scss';
 import { TabButton, TabList, TabPanel } from '../../shared/ui/tab';
 import { Museums } from '../museums';
 import { History } from '../history';
@@ -23,6 +21,7 @@ export const MuseumNavigation = () => {
 
   return (
     <TabList>
+      <h2>Музей</h2>
       <TabButton
         id="museums"
         control="panel-museums"
@@ -52,7 +51,7 @@ export const MuseumNavigation = () => {
       >
         <History
           text={text}
-          partIndex={128}
+          partIndex={442}
           header="Музей имени А.С. Пушкина"
         />
       </TabPanel>
