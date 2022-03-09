@@ -22,8 +22,9 @@ export const Modal: React.FC<ModalProps> = ({ children, title, onClose }) => {
         {/* eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions */}
         <div
           className={styles.Modal__Background}
-          aria-modal="true"
           role="dialog"
+          aria-modal="true"
+          aria-labelledby="modalHeading"
           onKeyDown={(event) => event.key === 'Escape' && onClose()}
         >
           <div className={styles.Modal__Card}>
