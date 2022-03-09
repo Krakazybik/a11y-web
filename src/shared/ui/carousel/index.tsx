@@ -32,31 +32,38 @@ export const Carousel: React.FC = ({ children }) => {
     [childCarouselNodes?.length, setPagesCount]
   );
 
+  const handleChangeSlide = (modifier: number) => {
+    const resultPage = selected + modifier;
+    if (resultPage >= pagesCount) setSelected(0);
+    else if (resultPage < 0) setSelected(pagesCount - 1);
+    else setSelected(resultPage);
+  };
+
   return (
     <section
       className={styles.Carousel}
       aria-roledescription="carousel"
-      aria-label="Highlighted television shows"
+      aria-label="Афиша предстоящих событий"
     >
+      <h2>Афиша</h2>
       <ButtonIcon
         label="Предыдущий слайд."
         icon={left}
         className={styles.Carousel_Button_Left}
         type="button"
-        onClick={() => setSelected((val) => val - 1)}
+        onClick={() => handleChangeSlide(-1)}
       >
-        {'<'}
+        Предыдущий слайд.
       </ButtonIcon>
       <ButtonIcon
         label="Следующий слайд."
         icon={right}
         className={styles.Carousel_Button_Right}
         type="button"
-        onClick={() => setSelected((val) => val + 1)}
+        onClick={() => handleChangeSlide(1)}
       >
-        {'>'}
+        Следующий слайд.
       </ButtonIcon>
-      <div className={styles.Carousel_Card} />
       {childCarouselNodes}
     </section>
   );
