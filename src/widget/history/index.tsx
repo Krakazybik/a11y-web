@@ -16,24 +16,22 @@ export const History: React.FC<HistoryProps> = ({
   const [showMore, setShowMore] = React.useState(false);
 
   return (
-    <div>
-      <article>
-        <h3 className={styles.visually_hidden}>{header}</h3>
-        <p>{partIndex ? text.slice(0, partIndex) : text}</p>
-        {(partIndex && !showMore && (
-          <button
-            className={styles.History__ReadMore}
-            type="button"
-            onClick={() => setShowMore(true)}
-          >
-            Читать далее
-          </button>
-        )) ||
-          ''}
-        {partIndex && showMore && (
-          <p aria-live="polite">{text.slice(partIndex)}</p>
-        )}
-      </article>
-    </div>
+    <article className={styles.History}>
+      <h3 className={styles.visually_hidden}>{header}</h3>
+      <p>{partIndex ? text.slice(0, partIndex) : text}</p>
+      {(partIndex && !showMore && (
+        <button
+          className={styles.History__ReadMore}
+          type="button"
+          onClick={() => setShowMore(true)}
+        >
+          Читать далее
+        </button>
+      )) ||
+        ''}
+      {partIndex && showMore && (
+        <p aria-live="polite">{text.slice(partIndex)}</p>
+      )}
+    </article>
   );
 };
