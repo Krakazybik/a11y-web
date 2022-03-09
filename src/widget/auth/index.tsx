@@ -5,7 +5,7 @@ import { Button } from '../../shared/ui/button';
 
 export const Auth: React.FC = () => (
   // eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions
-  <div aria-labelledby="modalHeading" className={styles.Auth}>
+  <div className={styles.Auth}>
     <h2 id="modalHeading">Вход</h2>
     <form>
       <label htmlFor="authEmail" className={styles.visually_hidden}>
