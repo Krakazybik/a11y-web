@@ -7,6 +7,7 @@ import { Auth } from '../auth';
 import { LanguageSwitch } from '../language-switch';
 import logo from '../../shared/ui/assets/musem.svg';
 import { Search } from '../search';
+import { Menu } from '../menu';
 
 export const Header: React.FC = () => {
   const [modal, showModal] = React.useState(false);
@@ -16,6 +17,7 @@ export const Header: React.FC = () => {
       <div>
         <img src={logo} alt="Музей изобразительных искусств имени пушкина" />
       </div>
+      <a href="#main-content">Перейти к основному контенту</a>
       <Search />
       <LanguageSwitch />
       <ButtonIcon
@@ -28,6 +30,8 @@ export const Header: React.FC = () => {
           <Auth />
         </Modal>
       )}
+
+      <Menu />
     </header>
   );
 };
