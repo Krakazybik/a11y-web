@@ -1,6 +1,7 @@
 import React from 'react';
 import cn from 'classnames';
 import styles from './styles.module.scss';
+import { AriaSpan } from '../aria-span';
 
 type RovingRadioGroupProps = {
   id: string;
@@ -53,17 +54,17 @@ export const RovingRadioGroup: React.FC<RovingRadioGroupProps> = ({
       role="radiogroup"
       aria-labelledby={`roving-radio-switch${id}`}
     >
-      <label
-        className={styles.visually_hidden}
-        htmlFor={`roving-radio-switch${id}`}
-      >
-        {ariaGroupCaption}
-      </label>
+      <AriaSpan
+        id={`roving-radio-switch${id}`}
+        text={`${ariaGroupCaption}. Используйте клавиши стрелка влево и стрелка вправо
+        для перемещения между элементами.`}
+      />
       {radioItems.map((item, index) => (
         <React.Fragment key={item.id}>
           <div
             role="radio"
             aria-checked={checked === index}
+            aria-labelledby={`label-${item.id}`}
             id={item.id}
             tabIndex={Number(checked === index) - 1}
             onKeyDown={handleRovingKey}
@@ -73,9 +74,7 @@ export const RovingRadioGroup: React.FC<RovingRadioGroupProps> = ({
           >
             {item.label}
           </div>
-          <label className={styles.visually_hidden} htmlFor={item.id}>
-            {item.ariaText}
-          </label>
+          <AriaSpan id={`label-${item.id}`} text={item.ariaText} />
         </React.Fragment>
       ))}
     </div>

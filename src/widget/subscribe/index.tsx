@@ -4,7 +4,7 @@ import { Button } from '../../shared/ui/button';
 import { UnderlinedInput } from '../../shared/ui/underlined-input';
 
 export const Subscribe: React.FC = () => (
-  <aside aria-labelledby="subscribe-heading">
+  <section aria-labelledby="subscribe-heading">
     <h2 id="subscribe-heading">Подписка на новости</h2>
     <form className={styles.Subscribe}>
       <div className={styles.Subscribe__Input}>
@@ -21,5 +21,5 @@ export const Subscribe: React.FC = () => (
         </label>
       </div>
     </form>
-  </aside>
+  </section>
 );

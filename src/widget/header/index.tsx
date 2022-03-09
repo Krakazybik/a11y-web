@@ -17,7 +17,9 @@ export const Header: React.FC = () => {
       <div>
         <img src={logo} alt="Музей изобразительных искусств имени пушкина" />
       </div>
-      <a href="#main-content">Перейти к основному контенту</a>
+      <a href="#main-content" className={styles.SkipLink}>
+        Перейти к основному контенту
+      </a>
       <Search />
       <LanguageSwitch />
       <ButtonIcon
