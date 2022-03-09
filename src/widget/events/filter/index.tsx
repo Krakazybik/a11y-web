@@ -8,7 +8,7 @@ export const Filter: React.FC = () => {
   const activeFilter = useStore($activeFilter);
 
   return (
-    <div className={styles.Filter}>
+    <div role="group" className={styles.Filter} aria-label="Фильтр событий">
       <button
         className={cn(
           styles.FilterButton,
