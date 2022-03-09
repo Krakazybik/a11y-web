@@ -6,10 +6,13 @@ import facebook from '../../shared/ui/assets/facebook.svg';
 import styles from './styles.module.scss';
 
 export const SocialNetworks = () => (
-  <section className={styles.Social_Networks}>
-    <h3>Социальные сети</h3>
-    <ButtonIcon label="email" icon={email} />
-    <ButtonIcon label="telegram" icon={telegram} />
-    <ButtonIcon label="facebook" icon={facebook} />
-  </section>
+  <nav
+    className={styles.Social_Networks}
+    aria-labelledby="heading-social-networks"
+  >
+    <h2 id="heading-social-networks">Социальные сети</h2>
+    <ButtonIcon role="link" label="email" icon={email} />
+    <ButtonIcon role="link" label="telegram" icon={telegram} />
+    <ButtonIcon role="link" label="facebook" icon={facebook} />
+  </nav>
 );
