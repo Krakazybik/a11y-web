@@ -1,13 +1,10 @@
 .Carousel {
-  display: grid;
-  grid-template-areas: "left card right";
-  grid-template-columns: 32px 1fr 32px;
-  justify-items: center;
-  align-items: center;
-  grid-gap: 32px;
-  width: 1032px+64px+64px;
+  display: flex;
+
+  width: 1300px;
   height: 600px;
   align-self: center;
+  position: relative;
 
   article {
     width: 100%;
@@ -26,9 +23,13 @@
 }
 
 .Carousel_Button_Left {
-  grid-area: left;
+  position: absolute;
+  top: 276px;
+  left: -4rem;
 }
 
 .Carousel_Button_Right {
-  grid-area: right;
+  position: absolute;
+  top: 276px;
+  right: -4rem;
 }
