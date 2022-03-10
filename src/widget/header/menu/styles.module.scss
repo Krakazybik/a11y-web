@@ -1,10 +1,19 @@
 .Menu {
   max-width: 1032px;
-  margin: 0 auto;
+  margin: 64px auto 0;
+  width: 100%;
 
  ul {
+   margin-block-start: 0;
+   padding-inline-start: 8px;
    display: flex;
    grid-gap: 40px;
    list-style-type: none;
+   font-size: 18px;
+   line-height: 21px;
+   text-align: left;
+   a {
+     color: black;
+   }
  }
 }

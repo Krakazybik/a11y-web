@@ -1,4 +1,4 @@
-@import "src/shared/ui/styles/colors";
+@import "../../shared/styles/colors";
 
 .Header {
   display: grid;
@@ -7,7 +7,13 @@
   max-width: 1032px;
   grid-gap: 16px;
   margin: 0 auto;
-  padding: 36px 0 80px;
+  padding: 36px 0;
+}
+
+.Logo {
+  display: flex;
+  width: 100%;
+  align-content: start;
 }
 
 .SkipLink {
@@ -22,7 +28,7 @@
   cursor: pointer;
   font-size: 14px;
   line-height: 1.5em;
-  margin-right: 128px;
+  margin-right: 248px;
   top: -120px;
 
   &:focus {

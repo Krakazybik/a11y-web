@@ -1,7 +1,7 @@
 import React from 'react';
 import { TabButton, TabList, TabPanel } from 'shared/ui/tab';
-import { Museums } from '../museums';
-import { History } from '../history';
+import { Museums } from './museums';
+import { History } from './history';
 
 const text =
   'Государственный музей изобразительных искусств имени А.С. Пушкина – одно из крупнейших в России художественных собраний зарубежного искусства с древнейших времен до наших дней.\n' +

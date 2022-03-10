@@ -1,8 +1,9 @@
 import React from 'react';
+import styles from './styles.module.scss';
 
 export const Lections = () => (
-  <section>
-    <h3>Экскурсии и лекции в прямом эфире</h3>
+  <section className={styles.Lections}>
+    <h2>Экскурсии и лекции в прямом эфире</h2>
     <p>
       С 1 июля вы можете присоединиться к нашим виртуальным мероприятиям —
       экскурсиям и лекциям для взрослых и детей, оплатив участие на сайте.

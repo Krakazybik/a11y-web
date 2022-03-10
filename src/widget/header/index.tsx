@@ -14,7 +14,7 @@ export const Header: React.FC = () => {
 
   return (
     <header className={styles.Header}>
-      <div>
+      <div className={styles.Logo}>
         <img src={logo} alt="Музей изобразительных искусств имени пушкина" />
       </div>
       <a href="#main-content" className={styles.SkipLink}>
