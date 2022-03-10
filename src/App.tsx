@@ -28,8 +28,12 @@ const AppLayout = () => (
             От Дюрера до Матисса. Избранные рисунки из собрания ГМИИ им. А.С.
             Пушкина
           </h3>
-          <p className={styles.visually_hidden}>С 10 июля до 1 ноября</p>
-          <address className={styles.visually_hidden}>Главное здание</address>
+          <p className={styles.visually_hidden}>
+            Выставка проводится с 10 июля до 1 ноября
+          </p>
+          <address className={styles.visually_hidden}>
+            В Главном здание, улица Волхонка, дом 12
+          </address>
           <Button
             style={{ position: 'relative', top: 460, left: 48 }}
             size="small"
@@ -44,12 +48,14 @@ const AppLayout = () => (
             backgroundSize: '100%',
           }}
         >
-          <h3 className={styles.visually_hidden} id="slide-header-2">
-            Ирина Затуловская. Бегство в Египет
+          <h3 className={styles.visually_hidden} id="slide-header-3">
+            Мумии Древнего Египта. Искусство бессмертия
           </h3>
-          <p className={styles.visually_hidden}>С 1 марта до 31 мая</p>
+          <p className={styles.visually_hidden}>
+            Выставка проводится с 1 марта до 31 мая
+          </p>
           <address className={styles.visually_hidden}>
-            Главное здание, Волхонка 12
+            В Главном здание, улица Волхонка, дом 12
           </address>
           <Button
             style={{ position: 'relative', top: 282, left: 72 }}
@@ -66,11 +72,13 @@ const AppLayout = () => (
           }}
         >
           <h3 className={styles.visually_hidden} id="slide-header-3">
-            Мумии Древнего Египта. Искусство бессмертия
+            Ирина Затуловская. Бегство в Египет.
           </h3>
-          <p className={styles.visually_hidden}>С 1 марта до 31 мая</p>
+          <p className={styles.visually_hidden}>
+            Выставка проводится с 1 марта до 31 мая
+          </p>
           <address className={styles.visually_hidden}>
-            Главное здание, Волхонка 12
+            В Главном здание, улица Волхонка, дом 12
           </address>
           <Button
             style={{ position: 'relative', top: 282, left: 72 }}
