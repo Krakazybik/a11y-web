@@ -42,7 +42,7 @@ export const Main = () => (
           backgroundSize: '100%',
         }}
       >
-        <h3 className={styles.visually_hidden} id="slide-header-3">
+        <h3 className={styles.visually_hidden} id="slide-header-2">
           Мумии Древнего Египта. Искусство бессмертия
         </h3>
         <p className={styles.visually_hidden}>

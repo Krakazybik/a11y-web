@@ -1,17 +1,53 @@
 import React from 'react';
+import YouTube, { Options } from 'react-youtube';
+import styles from './styles.module.scss';
 
-export const Stream: React.FC = () => (
-  <section aria-labelledby="heading-stream">
-    <h2 id="heading-stream">Онлайн трансляция</h2>
-    <iframe
-      title="Ай Вейвей: движение к общечеловеческому"
-      width={1030}
-      height={612}
-      src="https://www.youtube.com/embed/5qRR-5H1XgU?autoplay=0"
-      frameBorder={0}
-      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-      loading="lazy"
-      allowFullScreen
-    />
-  </section>
-);
+export const Stream: React.FC = () => {
+  const [player, showPlayer] = React.useState(false);
+
+  const opts: Options = {
+    height: '612',
+    width: '1030',
+    playerVars: {
+      autoplay: 1,
+    },
+  };
+
+  const handleClickPlay = () => {
+    showPlayer(true);
+  };
+
+  return (
+    <section aria-labelledby="heading-stream" className={styles.Stream}>
+      <h2 id="heading-stream">Онлайн трансляция</h2>
+
+      {player ? (
+        <YouTube videoId="5qRR-5H1XgU" opts={opts} />
+      ) : (
+        <>
+          <img
+            src="https://i.ytimg.com/vi/5qRR-5H1XgU/maxresdefault.jpg"
+            alt=""
+            width={opts.width}
+            height={opts.height}
+            aria-hidden
+          />
+          <button
+            className={styles.Play}
+            onClick={handleClickPlay}
+            aria-labelledby="stream-play-img"
+          >
+            <img
+              width={118}
+              height={118}
+              id="stream-play-img"
+              src="/assets/stream/play.png"
+              alt="Запустить трансляцию"
+              aria-hidden
+            />
+          </button>
+        </>
+      )}
+    </section>
+  );
+};

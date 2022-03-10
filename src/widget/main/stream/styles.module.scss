@@ -1,0 +1,21 @@
+.Stream {
+  position: relative;
+}
+
+.Play {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 96px;
+  bottom: 0;
+  margin: auto;
+  cursor: pointer;
+  width: 118px;
+  height: 118px;
+  background: none;
+  border: none;
+
+  &:hover {
+    filter: invert(0.7);
+  }
+}
