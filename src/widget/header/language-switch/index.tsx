@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import { RovingRadioGroup } from '../../shared/ui/roving-radio-group';
+import { RovingRadioGroup } from 'shared/ui/roving-radio-group';
 
 export const LanguageSwitch: React.FC = () => {
   const [lang, setLang] = React.useState('ru');

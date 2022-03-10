@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Card } from '../../shared/ui/card';
+import { Card } from 'shared/ui/card';
 import styles from './styles.module.scss';
 
 // TODO: Groups section role=group?

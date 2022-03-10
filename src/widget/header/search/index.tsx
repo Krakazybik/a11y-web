@@ -1,7 +1,7 @@
 import React from 'react';
+import { AriaSpan } from 'shared/ui/aria-span';
 import searchLogo from './assets/search.svg';
 import styles from './styles.module.scss';
-import { AriaSpan } from '../../shared/ui/aria-span';
 
 // TODO: ROLE SEARCH LANDMARK
 // TODO: fix labels

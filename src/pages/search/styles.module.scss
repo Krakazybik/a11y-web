@@ -1,0 +1,15 @@
+.Result_Table {
+  font-size: 22px;
+
+  th, td {
+    padding: 16px;
+    border: 1px solid black;
+  }
+
+  & {
+    min-width: 720px;
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin: 48px;
+  }
+}

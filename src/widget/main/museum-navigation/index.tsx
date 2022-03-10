@@ -1,5 +1,5 @@
 import React from 'react';
-import { TabButton, TabList, TabPanel } from '../../shared/ui/tab';
+import { TabButton, TabList, TabPanel } from 'shared/ui/tab';
 import { Museums } from '../museums';
 import { History } from '../history';
 
