@@ -15,6 +15,23 @@
 }
 
 .Subscribe__Input {
-  display: flex;
+  display: grid;
+  grid-template-areas: 'input button' 'checkbox checkbox';
+  width: 540px;
+  flex-direction: column;
+  flex-wrap: wrap;
   grid-gap: 20px;
+  max-height: 94px;
+
+  input {
+    grid-area: input;
+  }
+
+  div  {
+    grid-area: checkbox;
+  }
+
+  button {
+    grid-area: button;
+  }
 }
