@@ -44,6 +44,7 @@ export const Carousel: React.FC = ({ children }) => {
       className={styles.Carousel}
       aria-roledescription="carousel"
       aria-label="Афиша предстоящих событий"
+      aria-live="polite"
     >
       <h2 className={styles.visually_hidden}>Афиша</h2>
       <ButtonIcon
