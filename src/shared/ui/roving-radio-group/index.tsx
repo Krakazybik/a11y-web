@@ -17,6 +17,7 @@ export const RovingRadioGroup: React.FC<RovingRadioGroupProps> = ({
   radioItems,
 }) => {
   const [checked, setChecked] = React.useState(0);
+  const radioRefs = React.useRef<Array<HTMLDivElement | null>>([]);
 
   const getCyclicIndex = (index: number, modifier: number, end: number) => {
     if (index + modifier > end) return 0;
@@ -26,6 +27,7 @@ export const RovingRadioGroup: React.FC<RovingRadioGroupProps> = ({
 
   const moveChecked = (modifier: number) => {
     const newIndex = getCyclicIndex(checked, modifier, radioItems.length - 1);
+    radioRefs.current[newIndex]?.focus();
     onSwitch(newIndex);
     setChecked(newIndex);
   };
@@ -69,7 +71,9 @@ export const RovingRadioGroup: React.FC<RovingRadioGroupProps> = ({
             tabIndex={Number(checked === index) - 1}
             onKeyDown={handleRovingKey}
             onClick={() => handleClick(index)}
-            ref={(div) => checked === index && div?.focus()}
+            ref={(el) => {
+              radioRefs.current[index] = el;
+            }}
             className={cn(checked === index && styles.Selected)}
           >
             {item.label}
