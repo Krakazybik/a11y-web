@@ -3,14 +3,17 @@ import { Events } from 'widget/main/events';
 import { MuseumNavigation } from 'widget/main/museum-navigation';
 import { Stream } from 'widget/main/stream';
 import { Lections } from 'widget/main/lections';
+import { AriaSpan } from 'shared/ui/aria-span';
 import { Button } from 'shared/ui/button';
 import { Carousel } from 'shared/ui/carousel';
 import { PageHead } from 'shared/ui/page-head';
-import styles from '../../global.module.scss';
+import styles from './styles.module.scss';
 
 export const Main = () => (
   <>
-    <PageHead header="Государственный музей имени Пушкина" />
+    <PageHead header="Гераскин Е.В. - Государственный музей имени Пушкина" />
+    <h1 className={styles.visually_hidden}>Главная страница</h1>
+
     <Carousel>
       <article
         style={{
@@ -28,9 +31,11 @@ export const Main = () => (
         <address className={styles.visually_hidden}>
           В Главном здание, улица Волхонка, дом 12
         </address>
+
         <Button
           style={{ position: 'relative', top: 460, left: 48 }}
           size="small"
+          aria-labelledby="buy-ticket-button"
         >
           Купить онлайн
         </Button>
@@ -54,6 +59,7 @@ export const Main = () => (
         <Button
           style={{ position: 'relative', top: 282, left: 72 }}
           size="small"
+          aria-labelledby="buy-ticket-button"
         >
           Купить онлайн
         </Button>
@@ -77,14 +83,18 @@ export const Main = () => (
         <Button
           style={{ position: 'relative', top: 282, left: 72 }}
           size="small"
+          aria-labelledby="buy-ticket-button"
         >
           Купить онлайн
         </Button>
       </article>
     </Carousel>
-    <Events />
-    <MuseumNavigation />
-    <Stream />
-    <Lections />
+    <div className={styles.Main}>
+      <Events />
+      <MuseumNavigation />
+      <Stream />
+      <Lections />
+    </div>
+    <AriaSpan id="buy-ticket-button" text="Купить билет онлайн" />
   </>
 );
