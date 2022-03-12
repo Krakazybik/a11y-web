@@ -13,9 +13,14 @@ export const Header: React.FC = () => {
   const [modal, showModal] = React.useState(false);
 
   return (
-    <header className={styles.Header}>
+    <header className={styles.Header} id="header-root">
       <div className={styles.Logo}>
-        <img src={logo} alt="Музей изобразительных искусств имени пушкина" />
+        <img
+          src={logo}
+          alt="Музей изобразительных искусств имени пушкина"
+          width={202}
+          height={42}
+        />
       </div>
       <a href="#main-content" className={styles.SkipLink}>
         Перейти к основному контенту
@@ -32,7 +37,6 @@ export const Header: React.FC = () => {
           <Auth />
         </Modal>
       )}
-
       <Menu />
     </header>
   );
