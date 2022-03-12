@@ -4,7 +4,6 @@ import { Button } from 'shared/ui/button';
 import styles from './styles.module.scss';
 
 export const Auth: React.FC = () => (
-  // eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions
   <div className={styles.Auth}>
     <h2 id="modalHeading">Вход</h2>
     <form>
