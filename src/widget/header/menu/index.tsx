@@ -9,7 +9,7 @@ export const Menu = () => (
         <HashLink to="/#museums">Музей</HashLink>
       </li>
       <li>
-        <HashLink to="/">Посетителя</HashLink>
+        <HashLink to="/visitors/#main-content">Посетителя</HashLink>
       </li>
       <li>
         <HashLink to="/#main-events">Выставки и события</HashLink>
