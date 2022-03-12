@@ -1,10 +1,12 @@
 .Card {
   width: 312px;
   border-radius: 8px;
-  padding: 8px;
+  display: flex;
+  flex-direction: column;
 
-  &:hover, &:focus {
-    box-shadow: 0 0 1px 2px black;
+  &:focus-within {
+    outline: 2px solid black;
+    outline-offset: 12px;
   }
 
   img {

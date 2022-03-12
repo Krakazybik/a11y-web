@@ -2,6 +2,7 @@ import React from 'react';
 import cn from 'classnames';
 import styles from './styles.module.scss';
 import { AriaSpan } from '../aria-span';
+import { ToolTip } from '../tooltip';
 
 type RovingRadioGroupProps = {
   id: string;

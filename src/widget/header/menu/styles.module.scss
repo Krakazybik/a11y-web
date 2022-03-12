@@ -7,13 +7,20 @@
    margin-block-start: 0;
    padding-inline-start: 8px;
    display: flex;
-   grid-gap: 40px;
+   grid-gap: 32px;
    list-style-type: none;
    font-size: 18px;
    line-height: 21px;
    text-align: left;
-   a {
-     color: black;
+   li {
+     display: flex;
+     flex-wrap: nowrap;
+     a {
+
+       padding: 16px 12px;
+       color: black;
+     }
    }
+
  }
 }

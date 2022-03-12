@@ -24,14 +24,14 @@
   display: none;
 }
 
-.Carousel_Button_Left {
+.Carousel_Button_Left, .Carousel_Button_Right {
+  padding: 16px;
   position: absolute;
   top: 276px;
-  left: -4rem;
+  right: -5rem;
 }
 
-.Carousel_Button_Right {
-  position: absolute;
-  top: 276px;
-  right: -4rem;
+.Carousel_Button_Left {
+  left: -5rem;
 }
+

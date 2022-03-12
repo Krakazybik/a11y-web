@@ -1,8 +1,21 @@
 .Events {
    width: 100%;
-   display: flex;
-   flex-wrap: wrap;
-   grid-gap: 16px;
+
+
+
+   ul {
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      grid-gap: 16px;
+      list-style: none;
+      li {
+         outline-offset: 8px;
+         border-radius: 8px;
+      }
+   }
+
    button {
       padding: 16px 32px;
       text-decoration: underline;
