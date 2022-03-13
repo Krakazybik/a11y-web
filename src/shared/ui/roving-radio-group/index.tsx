@@ -19,6 +19,7 @@ export const RovingRadioGroup: React.FC<RovingRadioGroupProps> = ({
 }) => {
   const [checked, setChecked] = React.useState(0);
   const radioRefs = React.useRef<Array<HTMLDivElement | null>>([]);
+  const [tooltip, showTooltip] = React.useState(false);
 
   const getCyclicIndex = (index: number, modifier: number, end: number) => {
     if (index + modifier > end) return 0;
@@ -51,11 +52,18 @@ export const RovingRadioGroup: React.FC<RovingRadioGroupProps> = ({
     onSwitch(index);
   };
 
+  const handleShowTooltip = (state: boolean) => {
+    showTooltip(state);
+  };
+
   return (
     <div
+      id="roving-radio-group"
       className={styles.Roving_Radio}
       role="radiogroup"
       aria-labelledby={`roving-radio-switch${id}`}
+      onFocus={() => handleShowTooltip(true)}
+      onBlur={() => handleShowTooltip(false)}
     >
       <AriaSpan
         id={`roving-radio-switch${id}`}
@@ -82,6 +90,12 @@ export const RovingRadioGroup: React.FC<RovingRadioGroupProps> = ({
           <AriaSpan id={`label-${item.id}`} text={item.ariaText} />
         </React.Fragment>
       ))}
+      {tooltip && (
+        <ToolTip
+          elementId="roving-radio-group"
+          text="Используйте клавиши стрелка влево и стрелка вправо для перемещения между элементами."
+        />
+      )}
     </div>
   );
 };

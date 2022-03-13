@@ -3,8 +3,9 @@
 
 .Roving_Radio {
   display: flex;
+  position: relative;
   grid-gap: 8px;
-  div {
+  div[role=radio] {
     display: flex;
     justify-content: center;
     align-items: center;

@@ -1,6 +1,10 @@
 .ToolTip {
   position: absolute;
-  top: 64px;
+  top: 56px;
   display: flex;
-  width: 128px;
+  width: 202px;
+  border: 2px solid black;
+  border-radius: 8px;
+  background-color: white;
+  padding: 4px;
 }
