@@ -1,12 +1,14 @@
 .Stream {
   position: relative;
+  width: 100%;
+  margin-bottom: 12rem;
 }
 
 .Play {
   position: absolute;
   left: 0;
   right: 0;
-  top: 96px;
+  top: 50%;
   bottom: 0;
   margin: auto;
   cursor: pointer;

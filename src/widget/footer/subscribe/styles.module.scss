@@ -1,7 +1,5 @@
 .Subscribe {
   display: flex;
-  flex-direction: column;
-  grid-gap: 16px;
 
   input[type=checkbox]
   {
@@ -15,23 +13,21 @@
 }
 
 .Subscribe__Input {
-  display: grid;
-  grid-template-areas: 'input button' 'checkbox checkbox';
-  width: 540px;
-  flex-direction: column;
+  display: flex;
+  max-width: 540px;
+  flex-direction: row;
   flex-wrap: wrap;
   grid-gap: 20px;
-  max-height: 94px;
 
   input {
-    grid-area: input;
+    order: 1;
   }
 
   div  {
-    grid-area: checkbox;
+    order: 3;
   }
 
   button {
-    grid-area: button;
+    order: 2;
   }
 }

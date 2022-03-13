@@ -1,4 +1,4 @@
-@import "../../../../shared/styles/colors";
+@import "src/shared/styles/colors";
 
 .Filter {
   width: 100%;
@@ -6,20 +6,28 @@
 }
 
 .FilterButton {
+  text-decoration: none;
   padding: 16px 32px;
   border-radius: 8px;
   background: none;
-  border: none;
-  text-decoration: underline;
+  border: 3px solid $color-alt-dark;
   cursor: pointer;
   font-size: 22px;
   line-height: 26px;
   margin-right: 8px;
+  &:hover {
+    background: $color-alt-light;
+    border-color: $color-violet;
+  }
+  &:focus {
+    text-decoration: underline;
+  }
+  outline-width: 6px;
 }
 
 
 .Active {
   background: $color-alt;
-  text-decoration: none;
+  text-decoration: underline;
 }
 

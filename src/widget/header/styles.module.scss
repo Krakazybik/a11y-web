@@ -1,24 +1,31 @@
-@import "../../shared/styles/colors";
+@import "src/shared/styles/colors";
 
 .Header {
-  display: grid;
-  grid-template-columns: 6fr 3fr 1fr 1fr;
+  display: flex;
   justify-items: center;
+  justify-content: space-between;
+  align-content: space-between;
+  flex-wrap: wrap;
   max-width: 1032px;
   grid-gap: 16px;
-  margin: 0 auto;
-  padding: 36px 0;
+  margin: 36px auto 0;
 }
 
 .Logo {
   display: flex;
-  width: 100%;
   align-content: start;
+}
+
+.Controls {
+  display: flex;
+  grid-gap: 32px;
+  flex-wrap: nowrap;
+  max-width: 700px;
 }
 
 .SkipLink {
   position: absolute;
-  padding: 8px 16px;
+  padding: 8px 20px;
   border-radius: 8px;
   text-align: center;
   width: 164px;

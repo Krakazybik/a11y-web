@@ -21,17 +21,19 @@ export const Header: React.FC = () => {
           width={202}
           height={42}
         />
+        <a href="#main-content" className={styles.SkipLink}>
+          Перейти к основному контенту
+        </a>
       </div>
-      <a href="#main-content" className={styles.SkipLink}>
-        Перейти к основному контенту
-      </a>
-      <Search />
-      <LanguageSwitch />
-      <ButtonIcon
-        label="Вход"
-        icon={userLogo}
-        onClick={() => showModal(true)}
-      />
+      <div className={styles.Controls}>
+        <Search />
+        <LanguageSwitch />
+        <ButtonIcon
+          label="Вход"
+          icon={userLogo}
+          onClick={() => showModal(true)}
+        />
+      </div>
       {modal && (
         <Modal title="Авторизация - Вход" onClose={() => showModal(false)}>
           <Auth />

@@ -33,9 +33,9 @@ export const Main = () => (
         </address>
 
         <Button
-          style={{ position: 'relative', top: 460, left: 48 }}
+          style={{ position: 'relative', top: '64%', left: '36%' }}
           size="small"
-          aria-labelledby="buy-ticket-button"
+          aria-labelledby="buy-ticket-button slide-header-1"
         >
           Купить онлайн
         </Button>
@@ -57,9 +57,9 @@ export const Main = () => (
           В Главном здание, улица Волхонка, дом 12
         </address>
         <Button
-          style={{ position: 'relative', top: 282, left: 72 }}
+          style={{ position: 'relative', top: '48%', left: '8%' }}
           size="small"
-          aria-labelledby="buy-ticket-button"
+          aria-labelledby="buy-ticket-button slide-header-2"
         >
           Купить онлайн
         </Button>
@@ -81,9 +81,9 @@ export const Main = () => (
           В Главном здание, улица Волхонка, дом 12
         </address>
         <Button
-          style={{ position: 'relative', top: 282, left: 72 }}
+          style={{ position: 'relative', top: '48%', left: '8%' }}
           size="small"
-          aria-labelledby="buy-ticket-button"
+          aria-labelledby="buy-ticket-button slide-header-3"
         >
           Купить онлайн
         </Button>
@@ -95,6 +95,6 @@ export const Main = () => (
       <Stream />
       <Lections />
     </div>
-    <AriaSpan id="buy-ticket-button" text="Купить билет онлайн" />
+    <AriaSpan id="buy-ticket-button" text="Купить билет онлайн на" />
   </>
 );

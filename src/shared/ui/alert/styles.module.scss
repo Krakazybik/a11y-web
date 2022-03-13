@@ -1,4 +1,6 @@
 .Alert {
+  display: flex;
+  grid-gap: 16px;
   position: fixed;
   top: 32px;
   right: 32px;
@@ -8,4 +10,21 @@
   background: rgba(210, 244, 217, 0.95);
   border: 2px solid rgb(67, 255, 117);;
   width: 400px;
+
+  svg {
+    display: flex;
+    padding-top: 24px;
+    width: 64px;
+  }
+
+  &__Warning {
+    background: rgb(255, 233, 203, 0.95);
+    border: 2px solid rgb(241, 171, 57);;
+  }
+
+  &__Error {
+    background: rgba(255, 207, 207, 0.95);
+    border: 2px solid rgb(255, 59, 88);;
+  }
 }
+

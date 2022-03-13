@@ -6,8 +6,8 @@ export const Stream: React.FC = () => {
   const [player, showPlayer] = React.useState(false);
 
   const opts: Options = {
-    height: '612',
-    width: '1030',
+    height: '600px',
+    width: '100%',
     playerVars: {
       autoplay: 1,
     },
@@ -27,9 +27,9 @@ export const Stream: React.FC = () => {
         <>
           <img
             src="https://i.ytimg.com/vi/5qRR-5H1XgU/maxresdefault.jpg"
+            width="100%"
+            height="100%"
             alt=""
-            width={opts.width}
-            height={opts.height}
             aria-hidden
           />
           <button

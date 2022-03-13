@@ -2,7 +2,15 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-content: center;
+  align-items: center;
+  justify-items: center;
   max-width: 1032px;
+  width: 100%;
   grid-gap: 16px;
-  margin: 0 auto 96px;
+  margin: 16px auto 80px;
+}
+
+.Content__Wrapper {
+  padding: 0 16px;
 }

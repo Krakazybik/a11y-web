@@ -9,16 +9,21 @@ import { $filteredEvents } from './model';
 
 export const Events = () => {
   const events = useList($filteredEvents, (store, index) => (
-    // eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex
-    <li tabIndex={0}>
+    <li>
       <Card>
         <img src={store.src} alt="" />
-        <h3>{store.header}</h3>
-        <p>
-          Выставка до <time dateTime="2001-05-15 19:00">{store.endDate}</time>.
+        <h3 id={`event-item-head-${index}`}>{store.header}</h3>
+        <p id={`event-item-date-${index}`}>
+          <time dateTime="2001-05-15 19:00">{store.endDate}</time>.
         </p>
-        <p>{store.description}</p>
-        <a href={store.link}>Купить билет</a>
+        <p id={`event-item-text-${index}`}>{store.description}</p>
+        <a
+          href={store.link}
+          id={`event-item-link-${index}`}
+          aria-labelledby={`event-item-head-${index} event-item-date-${index} event-item-text-${index} event-item-link-${index}`}
+        >
+          Купить билет
+        </a>
       </Card>
     </li>
   ));

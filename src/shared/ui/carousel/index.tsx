@@ -1,9 +1,7 @@
 import React, { useEffect } from 'react';
 import cn from 'classnames';
-import left from '../assets/left.svg';
-import right from '../assets/right.svg';
-import styles from './styles.module.scss';
 import { ButtonIcon } from '../button-icon';
+import styles from './styles.module.scss';
 
 export const Carousel: React.FC = ({ children }) => {
   const [selected, setSelected] = React.useState(0);
@@ -49,8 +47,10 @@ export const Carousel: React.FC = ({ children }) => {
       <h2 className={styles.visually_hidden}>Афиша</h2>
       <ButtonIcon
         label="Предыдущий слайд."
-        icon={left}
+        icon="/carousel/left.png"
         className={styles.Carousel_Button_Left}
+        width={64}
+        height={64}
         type="button"
         onClick={() => handleChangeSlide(-1)}
       >
@@ -58,8 +58,10 @@ export const Carousel: React.FC = ({ children }) => {
       </ButtonIcon>
       <ButtonIcon
         label="Следующий слайд."
-        icon={right}
+        icon="/carousel/right.png"
         className={styles.Carousel_Button_Right}
+        width={64}
+        height={64}
         type="button"
         onClick={() => handleChangeSlide(1)}
       >

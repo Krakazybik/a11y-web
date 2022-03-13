@@ -4,22 +4,30 @@ import { Button } from 'shared/ui/button';
 import { UnderlinedInput } from 'shared/ui/underlined-input';
 import styles from './styles.module.scss';
 
-// TODO: Agree condition alert
-
 export const Subscribe: React.FC = () => {
   const [alert, showAlert] = useState(false);
+  const [error, showError] = useState(false);
   const [alignment, setAlignment] = useState(false);
 
+  // TODO: Avoid code duplicate
   useEffect(() => {
     const timer = setTimeout(() => showAlert(false), 8000);
 
     return () => clearTimeout(timer);
   }, [alert, showAlert]);
 
+  useEffect(() => {
+    const timer = setTimeout(() => showError(false), 8000);
+
+    return () => clearTimeout(timer);
+  }, [error, showError]);
+
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     if (alignment) {
       showAlert(true);
+    } else {
+      showError(true);
     }
   };
 
@@ -49,6 +57,12 @@ export const Subscribe: React.FC = () => {
         </div>
       </form>
       {alert && <Alert text="Вы успешно подписались на новостную рассылку." />}
+      {error && (
+        <Alert
+          text="Необходимо подтвердить согласие на обработку персональных данных."
+          level="error"
+        />
+      )}
     </section>
   );
 };

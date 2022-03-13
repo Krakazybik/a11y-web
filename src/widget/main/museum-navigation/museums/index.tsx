@@ -15,7 +15,10 @@ export const Museums = () => (
         >
           Подробнее
         </Link>
-        <img src="/struct_1.png" alt="Здание мемориальной квартиры Рихтера" />
+        <img
+          src="/assets/structs/struct_1.png"
+          alt="Здание мемориальной квартиры Рихтера"
+        />
         <h3 id="card-struct-1-head">МЕМОРИАЛЬНАЯ КВАРТИРА С.Т. РИХТЕРА</h3>
         <address id="card-struct-1-address">
           ул. Большая Бронная, 2/6, 16 этаж, кв. 58
@@ -33,7 +36,10 @@ export const Museums = () => (
         >
           Подробнее
         </Link>
-        <img src="/struct_2.png" alt="Здание мемориальной квартиры Рихтера" />
+        <img
+          src="/assets/structs/struct_2.png"
+          alt="Здание мемориальной квартиры Рихтера"
+        />
         <h3 id="card-struct-2-head">ЦЭВ «МУСЕЙОН»</h3>
         <address id="card-struct-2-address">
           Колымажный пер., 6/2, 3 (вход с Малого Знаменского переулка)
@@ -51,7 +57,10 @@ export const Museums = () => (
         >
           Подробнее
         </Link>
-        <img src="/struct_3.png" alt="Здание мемориальной квартиры Рихтера" />
+        <img
+          src="/assets/structs/struct_3.png"
+          alt="Здание мемориальной квартиры Рихтера"
+        />
         <h3 id="card-struct-3-head">УСАДЬБА ЛОПУХИНЫХ</h3>
         <address id="card-struct-3-address">
           Малый Знаменский пер., 3/5с4
@@ -69,7 +78,10 @@ export const Museums = () => (
         >
           Подробнее
         </Link>
-        <img src="/struct_4.png" alt="Здание мемориальной квартиры Рихтера" />
+        <img
+          src="/assets/structs/struct_4.png"
+          alt="Здание мемориальной квартиры Рихтера"
+        />
         <h3 id="card-struct-4-head">УЧЕБНЫЙ МУЗЕЙ</h3>
         <address id="card-struct-4-address">ул. Чаянова, 15</address>
       </Card>
@@ -85,7 +97,10 @@ export const Museums = () => (
         >
           Подробнее
         </Link>
-        <img src="/struct_5.png" alt="Здание мемориальной квартиры Рихтера" />
+        <img
+          src="/assets/structs/struct_5.png"
+          alt="Здание мемориальной квартиры Рихтера"
+        />
         <h3 id="card-struct-5-head">ОТДЕЛ ЛИЧНЫХ КОЛЛЕКЦИЙ</h3>
         <address id="card-struct-5-address">ул. Волхонка, 10</address>
       </Card>
@@ -101,7 +116,10 @@ export const Museums = () => (
         >
           Подробнее
         </Link>
-        <img src="/struct_6.png" alt="Здание мемориальной квартиры Рихтера" />
+        <img
+          src="/assets/structs/struct_6.png"
+          alt="Здание мемориальной квартиры Рихтера"
+        />
         <h3 id="card-struct-6-head">ГАЛЕРЕЯ</h3>
         <address id="card-struct-6-address">ул. Волхонка, 14</address>
       </Card>
