@@ -17,7 +17,7 @@ export const Main = () => (
     <Carousel>
       <article
         style={{
-          backgroundImage: `url(carousel/slide_1.png)`,
+          backgroundImage: `url(carousel/slide_1.jpg)`,
           backgroundSize: '100%',
         }}
       >
